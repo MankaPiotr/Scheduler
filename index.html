@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-call Draw</title>
+    <link rel="icon" href="roulette.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>On-call during the day</h1>
+    
+    <div id="form-container">
+        <div class="form-group">
+            <label for="names-input">List of Names:</label>
+            <input type="text" id="names-input" placeholder="Enter names, separated by commas">
+        </div>
+        <button onclick="startDraw()">Start</button>
+    </div>
+
+    <div id="name-counts"></div>
+
+    <table id="result-table" class="result-table" style="display:none;">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>8:00 - 12:00</th>
+                <th>12:00 - 16:00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td id="mon-morning"></td>
+                <td id="mon-afternoon"></td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td id="tue-morning"></td>
+                <td id="tue-afternoon"></td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td id="wed-morning"></td>
+                <td id="wed-afternoon"></td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td id="thu-morning"></td>
+                <td id="thu-afternoon"></td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td id="fri-morning"></td>
+                <td id="fri-afternoon"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
